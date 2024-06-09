@@ -1,7 +1,9 @@
-export function Home(){
+import Search from "../components/Search"
+
+export  function Home(){
     return(
         <div>
-            <h1>Home</h1>
+            <Search/>
         </div>
     )
 }
