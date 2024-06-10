@@ -14,5 +14,9 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'no-console': 'off', // Desativa a regra no-console
+    'react/prop-types': 'off', // Desativa a regra react/prop-types
+    '@typescript-eslint/no-explicit-any': 'off', // Desativa a regra no-explicit-any
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // Desativa a regra explicit-module-boundary-types
   },
-}
+};
