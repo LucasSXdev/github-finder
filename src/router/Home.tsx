@@ -8,7 +8,18 @@ export  function Home(){
     const loadUser = async (username:string) => {
         const res = await fetch(`https://api.github.com/users/${username}`)
         const data = await res.json()
-        console.log(data)
+        
+        const {avatar_url,login,location,followers,following}= data
+
+        const UserData : UserProps = {
+            avatar_url,
+            login,
+            location,
+            followers,
+            following,
+        }
+
+        setUser(UserData)
         
 
     }
@@ -16,6 +27,7 @@ export  function Home(){
     return(
         <div>
             <Search loadUser = {loadUser}/>
+            {user && <p>{user.login}</p>}
         </div>
     )
 }
